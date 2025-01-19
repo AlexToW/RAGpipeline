@@ -10,8 +10,8 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone <repository_url>
-   cd <repository_name>
+   git clone https://github.com/AlexToW/RAGpipeline.git
+   cd RAGpipeline
    ```
 
 2. Установите зависимости:
