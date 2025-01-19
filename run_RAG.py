@@ -21,14 +21,18 @@ def _main():
         "Можно ли добавить в исключение IDS и TAA правила?",
         "Сколько серверов минимально необходимо при кластерной установке?",
         "В каком формате нужно добавлять пользовательские ioc?",
-        "Какие технологии детектирования поддерживает kedr?"
+        "Какие технологии детектирования поддерживает kedr?",
     ]
+
+    answers = []
 
     for question in tqdm(questions):
         response = rag_pipeline.get_response(question)
-        print(f"query: '{question}'.\nResponse: '{response}'")
-        time.sleep(5)
+        answers.append(response)
+        time.sleep(1.5)
 
+    for question, answer in zip(questions, answers):
+        print(f"Query: '{question}'.\nResponse: '{answer}'\n\n")
 
 if __name__ == "__main__":
     _main()

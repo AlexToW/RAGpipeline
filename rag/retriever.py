@@ -24,7 +24,6 @@ class Retriever:
             self._build_vector_store()
 
         self.vector_store = self.vector_store.load(self.config.vector_store_path, embedding=self.embeddings)
-        print(self.vector_store)
         logger.info("Vector store loaded.")
     
     def _build_vector_store(self):
